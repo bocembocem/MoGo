@@ -170,3 +170,79 @@ a {
         }
     }
 }
+
+.caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-subtitle {
+        color: @color_lite_black;
+        font-family: @font_kaushan;
+        font-size: 24px;
+        font-weight: 400;
+        margin-top: 85px;
+        margin-bottom: 10px;
+    }
+
+    &-title {
+        color: @color_lite_black;
+        font-family: @font_montserrat;
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 33px;
+    }
+
+    &-line {        
+        width: 60px;
+        height: 3px;
+        background-color: @color_pink;
+        margin-bottom: 45px;
+    }
+
+    &-text {
+        color: @color_grey;
+        font-family: @font_roboto;
+        font-size: 15px;
+        font-weight: 400;
+        text-align: center;
+    }
+}
+
+.about {
+    &-outer {
+        background-color: @color_white;
+    }
+
+    &-images {
+        margin-top: 100px;
+        margin-bottom: 110px;
+
+        &-item {
+            &-inner {
+                position: relative;
+                background-color: @color_blue;
+                height: 100%;
+
+                &-layer {                    
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    top: 0;
+                    color: @color_white;
+                    font-family: @font_montserrat;
+                    font-size: 18px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);;
+                    opacity: 0;
+                }
+            }            
+        }
+    }
+}
