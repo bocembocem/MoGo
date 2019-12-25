@@ -343,3 +343,29 @@ a {
         }
     }
 }
+
+.feauture {
+    &-outer {
+        background-blend-mode: screen;
+        background-image: url(../img/bg1.png);
+        background-color: rgba(255, 255, 255, 0.85);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &-devices {
+        display: flex;
+        justify-content: center;
+
+        &-images {
+            position: relative;
+            text-align: center;
+
+            &-iphone {
+                position: absolute;
+                right: -140px;
+                bottom: -90px;
+            }
+        }
+    }
+}
