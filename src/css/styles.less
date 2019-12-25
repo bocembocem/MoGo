@@ -11,3 +11,162 @@
 @color_grey: #999999;
 @color_pink: #f38181;
 @color_yellow: #fce38a;
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.banner {
+    &-outer {
+        background-blend-mode: lighten;
+        background: url(../img/bg.png), linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+        background-size: cover;
+        background-position: center;
+        color: @color_white;
+    }
+
+    &-header {
+        display: flex;
+        align-items: baseline;
+        padding-top: 21px;
+        margin-bottom: 120px;
+
+        &-logo {
+            color: @color_white;
+            font-family: @font_montserrat;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        &-menu {
+            display: flex;
+            justify-content: space-between;
+
+            &-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &-link {
+                    color: @color_white;
+                    font-family: @font_montserrat;
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-transform: uppercase;                    
+                    padding-bottom: 6px; 
+
+                    &:hover {
+                        color: @color_yellow;
+                    }
+
+                    .some-top {
+                        margin-top: -4px;
+                    }
+                }
+                
+                &-border {
+                    height: 3px;
+                    background-color: @color_yellow;
+                }
+            }
+        }
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 120px;
+
+        &-subtitle {
+            color: @color_white;
+            font-family: @font_kaushan;
+            font-size: 72px;
+            font-weight: 400;
+            margin-bottom: 22px;
+        }
+
+        &-title {
+            color: @color_white;
+            font-family: @font_montserrat;
+            font-size: 150px;
+            font-weight: 700;
+            line-height: 140px;
+            text-transform: uppercase;
+            margin-bottom: 54px;
+        }
+
+        &-line {
+            width: 60px;
+            height: 3px;
+            background-color: @color_white;
+        }
+
+        &-button {
+            border: 3px solid @color_white;
+            color: @color_white;
+            font-family: @font_montserrat;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 8px 28px;                    
+            margin-top: 55px;
+
+            &:hover {
+                color: @color_pink;
+                border: 3px solid @color_pink;
+            }
+        }
+    }
+
+    &-slider {
+        &-item {
+            &-time {
+                position: relative;
+                width: 100%;
+                height: 3px;
+                background-color: @color_white;                
+                margin-bottom: 16px;
+                opacity: 0.5;
+
+                &-loader {
+                    position: absolute;
+                    left: 0;
+                    height: 100%;
+                    width: 0;
+                    background-color: @color_pink;
+                }
+            }
+
+            &-text {
+                display: flex;
+                align-items: baseline;                
+                margin-bottom: 20px;
+                opacity: 0.7;
+
+                &-first {
+                    color: @color_white;
+                    font-family: @font_montserrat;
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin-right: 5px;
+                }
+
+                &-second {
+                    color: @color_white;
+                    font-family: @font_montserrat;
+                    font-size: 18px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
