@@ -739,3 +739,65 @@ a {
         }
     }
 }
+
+.people {
+    &-outer {
+        padding-top: 25px;
+        background-blend-mode: screen;
+        background-image: url(../img/bg2.png);
+        background-color: rgba(255, 255, 255, 0.85);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &-blocks {
+        margin-top: 25px;
+        padding-bottom: 50px;
+
+        &-item {
+            display: flex;
+            margin-bottom: 80px;
+
+            &-img {
+                margin-left: 20px;
+            }
+
+            &-content {
+                margin-left: 30px;
+                &-name {
+                    color: @color_lite_black;
+                    font-family: @font_montserrat;
+                    font-size: 14px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    margin-bottom: 15px;
+                }
+    
+                &-position {
+                    color: @color_grey;
+                    font-family: @font_roboto;
+                    font-size: 15px;
+                    font-weight: 400;
+                    font-style: italic;
+                    line-height: 24px;
+                    margin-bottom: 15px;
+                }
+
+                &-line {
+                    width: 60px;
+                    height: 3px;
+                    background-color: @color_pink;
+                    margin-bottom: 25px;
+                }
+
+                &-text {
+                    color: @color_grey;
+                    font-family: @font_roboto;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
