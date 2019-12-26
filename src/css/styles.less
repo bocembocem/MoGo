@@ -11,6 +11,7 @@
 @color_grey: #999999;
 @color_pink: #f38181;
 @color_yellow: #fce38a;
+@color_lite_grey:  #f8f8f8;
 
 
 a {
@@ -412,7 +413,8 @@ a {
                     color: @color_grey;
                     font-family: @font_roboto;
                     font-size: 15px;
-                    font-weight: 400;
+                    font-weight: 300;
+                    font-style: italic;
                     line-height: 24px;
                     box-sizing: border-box;
                 }
@@ -458,5 +460,75 @@ a {
                 height: 30%;
             }
         } */
+    }
+}
+
+.quote {
+    &-outer {
+        background-color: @color_lite_grey;
+    }
+
+    &-body {
+        display: flex;
+        justify-content: space-between;
+
+        &-arrow {
+            display: flex;
+            align-items: center;
+
+            &-left {
+                transform: rotate(-90deg);
+            }
+
+            &-right {
+                transform: rotate(90deg);
+            }
+        }
+
+        &-slide {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 70px 75px;
+
+            &-img {
+                border: 3px solid @color_blue;
+                padding: 45px;
+                margin-right: 60px;
+            }
+
+            &-phrase {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                &-text {
+                    color: #999999;
+                    font-family: @font_roboto;
+                    font-size: 24px;
+                    font-weight: 300;
+                    font-style: italic;
+                    line-height: 36px;
+                }
+
+                &-autor {
+                    display: flex;
+                    align-items: center;
+
+                    &-line {
+                        width: 60px;
+                        height: 3px;
+                        background-color: @color_pink;
+                    }
+
+                    &-name {
+                        margin-left: 10px;
+                        color: @color_lite_black;
+                        font-family: @font_kaushan;
+                        font-size: 24px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
     }
 }
