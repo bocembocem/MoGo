@@ -369,3 +369,94 @@ a {
         }
     }
 }
+
+.service2 {
+    &-content {
+        margin-top: 90px;
+        margin-bottom: 120px;
+
+        &-accordeon {            
+            &-tab {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: 1px solid #e5e5e5;
+                height: 15%;
+
+                &-caption {
+                    color: #333333;
+                    font-family: Montserrat;
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+
+                    img {
+                        margin-right: 15px;
+                    }
+                }
+            }
+
+            &-toggle {
+                border: 1px solid #e5e5e5;
+                height: 35%;
+                overflow: scroll;
+                overflow-x: hidden;
+                box-sizing: border-box;
+                padding: 10px;
+                display: none;
+
+                &-text {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;       
+                    color: @color_grey;
+                    font-family: @font_roboto;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+        /*
+        &-accordeon {
+            &-inner {
+                height: 100%;
+            }
+
+            &-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: 1px solid #e5e5e5;
+                height: 20%;
+
+                &-title {
+                    display: flex;
+                    align-items: center;
+
+                    &-text {
+                        color: @color_lite_black;
+                        font-family: @font_montserrat;
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        margin-left: 15px;
+                    }
+                }
+            }
+
+            &-bottom {
+                border: 1px solid #e5e5e5;
+                color: @color_grey;
+                font-family: @font_roboto;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 24px;
+                overflow: scroll;
+                overflow-x: hidden;
+                height: 30%;
+            }
+        } */
+    }
+}
