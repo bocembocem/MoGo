@@ -514,6 +514,7 @@ a {
                 &-autor {
                     display: flex;
                     align-items: center;
+                    margin-top: 20px;
 
                     &-line {
                         width: 60px;
@@ -663,6 +664,76 @@ a {
                     font-weight: 400;
                     font-style: italic;
                     line-height: 24px; 
+                }
+            }
+        }
+    }
+}
+
+.testimonial {
+    &-outer {
+        background-color: @color_white;
+    }
+
+    &-body {
+        display: flex;
+        justify-content: space-between;        
+        margin-top: 100px;
+        margin-bottom: 130px;
+
+        &-arrow {
+            display: flex;
+            align-items: center;
+
+            &-left {
+                transform: rotate(-90deg);
+            }
+
+            &-right {
+                transform: rotate(90deg);
+            }
+        }
+
+        &-slide {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            margin-left: 45px;
+            margin-right: 75px;
+
+            &-phrase {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left: 30px;
+
+                &-text {
+                    color: #999999;
+                    font-family: @font_roboto;
+                    font-size: 24px;
+                    font-weight: 300;
+                    font-style: italic;
+                    line-height: 36px;
+                }
+
+                &-autor {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 20px;
+
+                    &-line {
+                        width: 60px;
+                        height: 3px;
+                        background-color: @color_pink;
+                    }
+
+                    &-name {
+                        margin-left: 10px;
+                        color: @color_lite_black;
+                        font-family: @font_kaushan;
+                        font-size: 24px;
+                        font-weight: 400;
+                    }
                 }
             }
         }
