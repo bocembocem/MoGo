@@ -466,6 +466,7 @@ a {
 .quote {
     &-outer {
         background-color: @color_lite_grey;
+        margin-bottom: 15px;
     }
 
     &-body {
@@ -529,6 +530,81 @@ a {
                     }
                 }
             }
+        }
+    }
+}
+
+.team {
+    &-outer {
+        background-color: @color_white;
+    }
+
+    &-images {
+        text-align: center;
+        margin-top: 90px;
+        margin-bottom: 115px;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+
+            &-inner {
+                position: relative;
+                background-color: @color_blue;
+                height: 100%;
+
+                &-layer {                    
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    top: 0;
+                    color: @color_white;
+                    font-family: @font_montserrat;
+                    font-size: 18px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);;
+                    opacity: 0;
+
+                    &-social {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;                        
+                        height: 56px;
+                        width: 56px;
+                        background-color: @color_yellow;
+                        margin-right: 1px;
+
+                        &:hover {
+                            background-color: @color_pink;
+                        }
+                    }
+                }                
+            }
+
+            &-name {
+                background-color: @color_white;
+                margin-top: 30px;
+                color: @color_lite_black;
+                font-family: @font_montserrat;
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            &-position {
+                margin-top: 15px;
+                background-color: @color_white;
+                color: @color_grey;
+                font-family: @font_roboto;
+                font-size: 15px;
+                font-weight: 400;
+                font-style: italic;
+                line-height: 24px;
+            }            
         }
     }
 }
