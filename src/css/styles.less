@@ -801,3 +801,91 @@ a {
         }
     }
 }
+
+.blog {
+    &-outer {
+        padding-top: 25px;
+        background-color: @color_white;
+    }
+
+    &-posts {
+        &-item {
+            margin-bottom: 120px;
+            &-image {
+                position: relative;
+                margin-bottom: 20px;
+
+                &-data {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: @color_blue;
+                    padding: 15px;
+                    left: -10px;
+                    bottom: 10px;
+
+                    &-number {
+                        color: @color_white;
+                        font-family: @font_montserrat;
+                        font-size: 30px;
+                        font-weight: 700;
+                        line-height: 1;
+                        text-transform: uppercase;
+                    }
+
+                    &-month {
+                        color: @color_white;
+                        font-family: @font_roboto;
+                        font-size: 15px;
+                        font-weight: 400;
+                        font-style: italic;
+                    }
+                }
+            }
+
+            &-title {
+                color: @color_lite_black;
+                font-family: @font_montserrat;
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+            }
+
+            &-subtitle {
+                color: @color_grey;
+                font-family: @font_roboto;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 24px;
+                margin-bottom: 20px;
+            }
+
+            &-line {
+                width: 100%;
+                height: 1px;
+                background-color: #e5e5e5;
+            }
+
+            &-statistics {
+                display: flex;
+                color: @color_grey;
+                font-family: @font_roboto;
+                font-style: italic;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 24px;
+
+                img {
+                    margin-right: 7px;
+                }
+
+                &-view {                    
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
