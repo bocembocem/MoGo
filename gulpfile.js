@@ -40,7 +40,7 @@ function styles() {
 
 function img(){
 	return gulp.src('./src/img/**/*')
-			   .pipe(imagemin())
+			   .pipe(gulpif(production, imagemin()))
 			   .pipe(gulp.dest('./build/img'))
 }
 
