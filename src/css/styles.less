@@ -504,12 +504,15 @@ a {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 70px 75px;
+            margin: 70px 0;
 
             &-img {
-                border: 3px solid @color_blue;
-                padding: 45px;
-                margin-right: 60px;
+                text-align: center;
+
+                img {
+                   border: 3px solid @color_blue;
+                    padding: 45px; 
+                }
             }
 
             &-phrase {
@@ -712,14 +715,15 @@ a {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-left: 45px;
-            margin-right: 75px;
+
+            &-img {
+                text-align: center;
+            }
 
             &-phrase {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                margin-left: 30px;
 
                 &-text {
                     color: #999999;
