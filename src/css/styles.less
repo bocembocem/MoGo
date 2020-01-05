@@ -662,17 +662,12 @@ a {
         &-item {
             display: flex;
             flex-direction: column;
-            margin-bottom: 20px;
+            align-items: center;
 
             &-inner {
-                display: flex;
-                justify-content: center;
                 position: relative;                
                 height: 100%;
-
-                &-img {
-                    background-color: @color_blue;
-                }
+                background-color: @color_blue;
 
                 &-layer {                    
                     position: absolute;
@@ -707,8 +702,7 @@ a {
             }
 
             &-name {
-                background-color: @color_white;
-                margin-top: 30px;
+                margin-top: 50px;
                 color: @color_lite_black;
                 font-family: @font_montserrat;
                 font-size: 14px;
@@ -718,7 +712,6 @@ a {
 
             &-position {
                 margin-top: 15px;
-                background-color: @color_white;
                 color: @color_grey;
                 font-family: @font_roboto;
                 font-size: 15px;

@@ -17,7 +17,7 @@ $(function() {
         }
         menuCheck = !menuCheck;        
     });
-    /* */
+    
     $(window).on('resize', function() {
         if($(this).outerWidth() >= 576) {
             $('.banner-header-menu').css({
@@ -108,6 +108,57 @@ $(function() {
             height: '100%'
         });
     });
+     
+    $('.team-images-item-inner').on('mouseenter', function() {
+        $(this).children('.team-images-item-inner-img').stop().animate({
+            marginLeft: '-20px',
+            marginTop: '-10px'
+        });
+        let getWidth = Math.ceil($(this).children('.team-images-item-inner-img').outerWidth());
+        let getHeight = Math.ceil($(this).children('.team-images-item-inner-img').outerHeight());
+        $(this).css({
+            height: getHeight,
+            width: getWidth
+        });
+        $(this).children('.team-images-item-inner-layer').stop().animate({
+            opacity: 1,
+            marginLeft: '-10px',
+            marginTop: '-10px',
+            width: getWidth,
+            height: getHeight
+        });
+    });
+    $('.team-images-item-inner').on('mouseleave', function() {
+        $(this).children('.team-images-item-inner-img').stop().animate({
+            marginLeft: 0,
+            marginTop: 0
+        }, function() {
+            $(this).parent().css({
+                height: '100%',
+                width: 'auto'
+            });
+        });        
+        $(this).children('.team-images-item-inner-layer').stop().animate({
+            opacity: 0,
+            marginLeft: 0,
+            marginTop: 0,
+            width: '100%',
+            height: '100%'
+        });
+    });
+/*
+    $('.team-images-item-inner').on('mouseenter', function() {
+        $(this).children('.team-images-item-inner-img').stop().animate({
+            marginLeft: '-10px',
+            marginTop: '-10px'
+        });
+    });
+    $('.team-images-item-inner').on('mouseleave', function() {
+        $(this).children('.team-images-item-inner-img').stop().animate({
+            marginLeft: 0,
+            marginTop: 0
+        });
+    });*/
 });
 
 function slideStart(item) {
