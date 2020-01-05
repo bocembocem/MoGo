@@ -568,12 +568,10 @@ a {
     }
 
     &-body {
-        display: flex;
-        justify-content: space-between;
-
         &-arrow {
             display: flex;
             align-items: center;
+            cursor: pointer;
 
             &-left {
                 transform: rotate(-90deg);
@@ -584,20 +582,20 @@ a {
             }
         }
 
+        &-img {
+            display: flex;
+            align-items: center;
+
+            img {
+                border: 3px solid @color_blue;
+                padding: 45px; 
+            }
+        }
+
         &-slide {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            margin: 70px 0;
-
-            &-img {
-                text-align: center;
-
-                img {
-                   border: 3px solid @color_blue;
-                    padding: 45px; 
-                }
-            }
+            margin: 70px 0;            
 
             &-phrase {
                 display: flex;
@@ -769,10 +767,16 @@ a {
                     margin-top: 20px;
                     margin-bottom: 15px;
                     color: @color_white;
+                    text-align: center;
                     font-family: @font_montserrat;
                     font-size: 14px;
                     font-weight: 400;
                     text-transform: uppercase;
+
+                    @media (max-width: 575px) {
+                        margin-top: 10px;
+                        margin-bottom: 5px;
+                    }
                 }
 
                 &-subtitle {
@@ -782,6 +786,10 @@ a {
                     font-weight: 400;
                     font-style: italic;
                     line-height: 24px; 
+
+                    @media (max-width: 575px) {
+                        line-height: 1.5;
+                    }
                 }
             }
         }
@@ -793,15 +801,14 @@ a {
         background-color: @color_white;
     }
 
-    &-body {
-        display: flex;
-        justify-content: space-between;        
+    &-body {       
         margin-top: 100px;
         margin-bottom: 130px;
 
         &-arrow {
             display: flex;
             align-items: center;
+            cursor: pointer;
 
             &-left {
                 transform: rotate(-90deg);
@@ -812,14 +819,14 @@ a {
             }
         }
 
+        &-img {
+            display: flex;
+            align-items: center;
+        }
+
         &-slide {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            &-img {
-                text-align: center;
-            }
+            align-items: center;            
 
             &-phrase {
                 display: flex;

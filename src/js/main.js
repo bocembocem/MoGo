@@ -146,19 +146,18 @@ $(function() {
             height: '100%'
         });
     });
-/*
-    $('.team-images-item-inner').on('mouseenter', function() {
-        $(this).children('.team-images-item-inner-img').stop().animate({
-            marginLeft: '-10px',
-            marginTop: '-10px'
+
+    $('.work2-item-image').on('mouseenter', function() {
+        $(this).children('.work2-item-image-layer').stop().animate({
+            opacity: 1
+        });
+        
+    });
+    $('.work2-item-image').on('mouseleave', function() {
+        $(this).children('.work2-item-image-layer').stop().animate({
+            opacity: 0
         });
     });
-    $('.team-images-item-inner').on('mouseleave', function() {
-        $(this).children('.team-images-item-inner-img').stop().animate({
-            marginLeft: 0,
-            marginTop: 0
-        });
-    });*/
 });
 
 function slideStart(item) {
