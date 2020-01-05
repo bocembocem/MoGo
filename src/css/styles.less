@@ -492,6 +492,14 @@ a {
         &-accordeon {  
             min-height: 380px;
 
+            &-inner {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
             &-tab {
                 display: flex;
                 justify-content: space-between;
@@ -499,6 +507,7 @@ a {
                 border: 1px solid #e5e5e5;
                 height: 60px;
                 margin-top: 10px;
+                width: 100%;
 
                 &:first-child {
                     margin-top: 0;
@@ -529,6 +538,7 @@ a {
                 box-sizing: border-box;
                 padding: 10px;
                 display: none;
+                width: 100%;
 
                 &::-webkit-scrollbar {
                     width: 3px;
@@ -568,78 +578,108 @@ a {
     }
 
     &-body {
+        padding: 70px 0;
+        display: flex;
+        justify-content: space-around;
+        
         &-arrow {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-
             &-left {
-                transform: rotate(-90deg);
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                &-img {
+                    transform: rotate(-90deg); 
+                }                
             }
 
             &-right {
-                transform: rotate(90deg);
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                cursor: pointer;
+
+                &-img {
+                    transform: rotate(90deg);
+                }
             }
         }
 
         &-img {
             display: flex;
+            justify-content: center;
             align-items: center;
 
             img {
                 border: 3px solid @color_blue;
-                padding: 45px; 
+                padding: 45px;
+
+                @media (min-width: 769px) and (max-width: 991px){                      
+                    padding: 35px;
+                }
+
+                @media (min-width: 576px) and (max-width: 768px) {
+                    padding: 25px;
+                }
             }
         }
 
-        &-slide {
-            display: flex;
-            align-items: center;
-            margin: 70px 0;            
+        &-comment {
+            &-inner {
+                display: flex;            
+                overflow: hidden; 
+            }
+            
 
-            &-phrase {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                font-size: 24px; 
-        
-                @media (min-width: 576px) and (max-width: 768px) {
-                    font-size: 20px;
-                }
+            &-slide {
+                flex: none;
+                width: 100%;             
+                
+                &-phrase {
+                    font-size: 24px;
 
-                @media (max-width: 576px) {
-                    font-size: 16px;
-                }
-
-
-                &-text {
-                    color: #999999;
-                    font-family: @font_roboto;
-                    font-weight: 300;
-                    font-style: italic;
-                    line-height: 36px;
-
-                    @media (max-width: 768px) {
-                        line-height: 1.5;
+                    @media (min-width: 769px) and (max-width: 991px){                      
+                        font-size: 22px;
                     }
-                }
-
-                &-autor {
-                    display: flex;
-                    align-items: center;
-                    margin-top: 20px;
-
-                    &-line {
-                        width: 60px;
-                        height: 3px;
-                        background-color: @color_pink;
+            
+                    @media (min-width: 576px) and (max-width: 768px) {
+                        font-size: 18px;
                     }
 
-                    &-name {
-                        margin-left: 10px;
-                        color: @color_lite_black;
-                        font-family: @font_kaushan;
-                        font-weight: 400;
+                    @media (max-width: 576px) {
+                        font-size: 16px;
+                    }
+
+
+                    &-text {
+                        color: #999999;
+                        font-family: @font_roboto;
+                        font-weight: 300;
+                        font-style: italic;
+                        line-height: 36px;
+
+                        @media (max-width: 768px) {
+                            line-height: 1.5;
+                        }
+                    }
+
+                    &-autor {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 20px;
+
+                        &-line {
+                            width: 60px;
+                            height: 3px;
+                            background-color: @color_pink;
+                        }
+
+                        &-name {
+                            margin-left: 10px;
+                            color: @color_lite_black;
+                            font-family: @font_kaushan;
+                            font-weight: 400;
+                        }
                     }
                 }
             }
@@ -774,6 +814,7 @@ a {
                     text-transform: uppercase;
 
                     @media (max-width: 575px) {
+                        font-size: 10px;
                         margin-top: 10px;
                         margin-bottom: 5px;
                     }
@@ -788,6 +829,7 @@ a {
                     line-height: 24px; 
 
                     @media (max-width: 575px) {
+                        font-size: 10px;
                         line-height: 1.5;
                     }
                 }
@@ -804,18 +846,29 @@ a {
     &-body {       
         margin-top: 100px;
         margin-bottom: 130px;
+        display: flex;
+        justify-content: space-around;
 
         &-arrow {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-
             &-left {
-                transform: rotate(-90deg);
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                &-img {
+                    transform: rotate(-90deg); 
+                }                
             }
 
             &-right {
-                transform: rotate(90deg);
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                cursor: pointer;
+
+                &-img {
+                    transform: rotate(90deg);
+                }
             }
         }
 
@@ -825,17 +878,22 @@ a {
         }
 
         &-slide {
-            display: flex;
-            align-items: center;            
+            &-inner {
+                display: flex;
+                overflow: hidden;
+            }           
 
             &-phrase {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
+                flex: none;
+                width: 100%;
                 font-size: 24px;
         
+                @media (min-width: 769px) and (max-width: 991px){                      
+                    font-size: 22px;
+                }
+        
                 @media (min-width: 576px) and (max-width: 768px) {
-                    font-size: 20px;
+                    font-size: 18px;
                 }
                 
                 @media (max-width: 576px) {
@@ -1158,8 +1216,10 @@ a {
                 height: 40px;
                 border: 1px solid #e7e7e7;
                 width: 60%;
+                text-align: center;
 
                 &::placeholder {
+                    text-align: left;
                     color: #cccccc;
                     font-family: @font_roboto;
                     font-style: italic;
@@ -1180,6 +1240,11 @@ a {
                 text-transform: uppercase;
                 padding: 0 34px;
                 cursor: pointer;
+
+                @media (max-width: 576px) {
+                    font-size: 12px;
+                    padding: 0 12px;
+                }
             }
         }
     }
@@ -1201,6 +1266,11 @@ a {
         &-blog {
             display: flex;            
             margin-top: 30px;
+
+            @media (max-width: 400px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
             &-img {                
                 margin-bottom: 10px;
